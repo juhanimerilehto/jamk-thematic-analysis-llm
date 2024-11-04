@@ -1,4 +1,4 @@
-# Feedback Analyzer
+# Thematic Analyzer
 
 **Version 1.0**
 ### Creator: Juhani Merilehto - @juhanimerilehto - Jyväskylä University of Applied Sciences (JAMK), Likes institute
@@ -7,11 +7,11 @@
 
 ## Overview
 
-Feedback Analyzer is a Python-based tool that processes qualitative data such as feedback in text form, and performs thematic analysis using AI (LLM, here, Claude 3.5 Sonnet). It was developed at JAMK University of Applied Sciences in collaboration with Likes institute. The tool utilizes the Claude API by Anthropic for natural language understanding and thematic analysis, processing data in two stages: initial categorization and iterative thematic analysis.
+Thematic Analyzer is a Python-based tool that processes qualitative data such as feedback in text form, and performs thematic analysis using AI (LLM, here, Claude 3.5 Sonnet). It was developed at JAMK University of Applied Sciences in collaboration with Likes institute. The tool utilizes the Claude API by Anthropic for natural language understanding and thematic analysis, processing data in two stages: initial categorization and iterative thematic analysis.
 
 ## Features
 
-- **Initial Feedback Analysis**: Processes raw data and categorizes it into primary and secondary themes
+- **Initial Category Analysis**: Processes raw data and categorizes it into primary and secondary themes
 - **Thematic Batch Analysis**: Performs iterative analysis to refine and aggregate themes
 - **AI-Powered Analysis**: Uses Anthropic's Claude API for sophisticated natural language understanding
 - **Excel Integration**: Works with Excel files for both input and output
@@ -48,10 +48,10 @@ Feedback Analyzer is a Python-based tool that processes qualitative data such as
 
 ## Usage
 
-1. Prepare your feedback data in an Excel file with appropriate column headers.
+1. Prepare your qualitative data in an Excel file with appropriate column headers.
 
 2. Configure the analysis by modifying the YAML configuration files:
-   - `category_config.yaml` for initial feedback analysis
+   - `category_config.yaml` for initial category analysis
    - `thematic_config.yaml` for thematic batch analysis
 
 3. Run the initial analysis:
@@ -112,7 +112,7 @@ category_types:
   "primary_feedback_categories": "primary feedback"
   "secondary_feedback_categories": "secondary feedback"
 
-# Example from Finnish dataset:
+# Example from "Work feedback" dataset:
 # category_types:
 #   "support_needs_categories": "support needs"
 #   "feedback_categories": "feedback"
