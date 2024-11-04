@@ -1,0 +1,26 @@
+# Analysis Configuration
+column_mapping:
+  "tyo": "primary_feedback"
+  "yleis": "general_feedback"
+  "tyohyvinvointi": "wellbeing_feedback"
+  "vapaa": "open_feedback"
+
+# Analysis Context Template
+analysis_context: |
+  Analyze the following feedback responses thematically and provide two lists of categories:
+  1. List of themes related to {primary_category}
+  2. List of themes related to {secondary_category}
+  Use only keywords or short phrases. Do not use numbers or bullet points.
+  Categories should be descriptive.
+  If there isn't enough information to form a category, don't force it.
+  Separate the lists using ---.
+  Separate each item in the lists using semicolons (;).
+
+  Your response should contain only the two lists separated by ---. Do not include any explanatory text or numbering.
+
+# Category Names
+primary_category: "support needs"
+secondary_category: "general feedback"
+
+# Optional System Prompt
+system_prompt: "You are an expert in analyzing open-ended survey responses."

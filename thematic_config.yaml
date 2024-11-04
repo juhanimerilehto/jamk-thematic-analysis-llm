@@ -1,0 +1,37 @@
+# Analysis settings
+model: "claude-3-5-sonnet-20240620"
+max_tokens: 4000
+temperature: 0
+max_batch_size: 20  # Maximum number of rows or categories per batch
+batch_by: "rows"    # Can be "rows" or "categories"
+
+# Input/Output
+input_file: "analysis_results.xlsx"
+output_directory: "analysis_output"
+
+# Category types to analyze
+category_types:
+  "support needs_categories": "support needs"
+  "general feedback_categories": "feedback"
+
+# Prompts
+analysis_prompt: |
+  Analyze and combine the following {category_type} categories:
+
+  {categories}
+
+  Combine similar categories and create themes. Use clear, descriptive labels.
+  Provide your response in the format:
+  Theme 1: [Theme name (count)]
+  - [Category 1 (count)]
+  - [Category 2 (count)]
+
+aggregation_prompt: |
+  Aggregate the following {category_type} themes and categories:
+
+  {categories}
+
+  Combine similar themes, sum up category counts, and reorganize them by frequency.
+  Try to include at least 90% of categories within themes.
+  Combine similar categories (e.g., "Time management at work" and "Work time management").
+  Separate categories with semicolons (;).

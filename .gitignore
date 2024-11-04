@@ -1,0 +1,20 @@
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDEs
+.vscode/
+.idea/
+
+# Project specific
+*.xlsx
+!input_data.xlsx  # Keep example input file
+analysis_output/
